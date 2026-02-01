@@ -1,0 +1,13 @@
+[Minetest]
+engine_location = "/usr/bin/minetest"
+engine_version = "5.8.0"
+
+[Directories]
+mods = "~/.minetest/mods"
+textures = "~/.minetest/textures"
+games = "~/.minetest/games"
+
+[ContentDB]
+api_url = "https://content.luanti.org"
+content_flags = []
+content_types = ["mod", "game", "txp"]
