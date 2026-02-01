@@ -77,12 +77,11 @@ def iface_handle_group(value):
             items[key] = handle(value)
     return items
 
-def parse_config(conf_file: str) -> dict | None:
+def parse_config(conf_file: str) -> dict:
     try:
         conf_string = prepare_conf_for_parsing(conf_file)
     except MinetestConfParseException as e:
         raise MinetestConfParseException(message="Error in preprocessing caused by :", cause=e)
-    if conf_string is None: return None
     config = {}
     for line in conf_string.split("\n"):
         line = line.strip()
